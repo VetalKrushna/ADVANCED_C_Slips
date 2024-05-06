@@ -1,0 +1,32 @@
+/*q 1) a wRITE A PROGRAM TO DECLARE A STRUCTURE PERSON (NAME, ADDRESS) WHICH 
+CONTAINS ANOTHER STRUCTURE BIRTHDATE (DAY, MONTH, YEAR). aCCEPT THE DETAILS 
+OF N PERSONS AND DISPLAY THEM. 
+*/
+#INCLUDE<STDIO.H>
+#INCLUDE<STDLIB.H>
+ STRUCT PERSON
+ {
+    CHAR NAME[20],ADDR[30];
+    STRUCT BDATE
+    {
+        INT D,M,Y;
+    }B;
+ }P[100];
+INT MAIN()
+{
+    INT N,I;
+    PRINTF("eNTER LIMIT:");
+    SCANF("%D",&N);
+    FOR(I=0;I<N;I++)
+    {
+        PRINTF("\NeNTER nAME aDDRESS AND dATE IN dd-mm-yyyy FORMATE:");
+        SCANF("%S%S%D%D%D",&P[I].NAME,&P[I].ADDR,&P[I].B.D,&P[I].B.M,&P[I].B.Y);
+    }
+     PRINTF("\N nAME aDDRESS  bIRTHDATE ");
+     PRINTF("\N-------------------------");
+    FOR(I=0;I<N;I++)
+    {
+       
+        PRINTF("\N %S\T%S\T%D/%D/%D",P[I].NAME,P[I].ADDR,P[I].B.D,P[I].B.M,P[I].B.Y);
+    }
+}ÿ
